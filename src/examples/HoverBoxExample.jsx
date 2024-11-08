@@ -12,6 +12,7 @@ import {
 } from "react-icons/si";
 import HoverBox from "../components/HoverBox";
 import ButtonGroup from "../components/ButtonGroup";
+import Flower from "../assets/flower.jpg";
 
 const HoverBoxExample = () => {
   const textColor = "text-white";
@@ -122,6 +123,13 @@ const HoverBoxExample = () => {
           >
             <SiAmazon className="text-xl sm:text-3xl md:text-4xl" />
           </HoverBox>
+        </div>
+        <div className="grid grid-cols-1">
+          <img
+            src={Flower}
+            alt="flower"
+            className="w-full object-cover h-40 grayscale"
+          />
         </div>
       </div>
     </div>
