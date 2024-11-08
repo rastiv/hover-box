@@ -109,6 +109,7 @@ const HoverBox = ({
   hoverTextColor,
   hoverBackgroundColor,
   clipShape = "polygon",
+  duration = 0.35,
   href = "",
   ...otherProps
 }) => {
@@ -133,7 +134,7 @@ const HoverBox = ({
       clipPath = getClipPathLine(side, value, true);
     }
 
-    animate(scope.current, { clipPath });
+    animate(scope.current, { clipPath }, { duration });
   };
 
   const handleMouseLeave = (e) => {
@@ -155,7 +156,7 @@ const HoverBox = ({
       clipPath = getClipPathLine(side, value);
     }
 
-    animate(scope.current, { clipPath });
+    animate(scope.current, { clipPath }, { duration });
   };
 
   const Box = href ? "a" : "div";
@@ -184,9 +185,10 @@ const HoverBox = ({
 
 HoverBox.propTypes = {
   children: PropTypes.node.isRequired,
-  hoverTextColor: PropTypes.string.isRequired,
-  hoverBackgroundColor: PropTypes.string.isRequired,
+  hoverTextColor: PropTypes.string,
+  hoverBackgroundColor: PropTypes.string,
   clipShape: PropTypes.oneOf(["rectangle", "polygon", "circle", "line"]),
+  duration: PropTypes.number,
   href: PropTypes.string,
 };
 

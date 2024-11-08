@@ -12,7 +12,6 @@ import {
 } from "react-icons/si";
 import HoverBox from "../components/HoverBox";
 import ButtonGroup from "../components/ButtonGroup";
-import Flower from "../assets/flower.jpg";
 
 const HoverBoxExample = () => {
   const textColor = "text-white";
@@ -43,17 +42,21 @@ const HoverBoxExample = () => {
             clipShape={clipShape}
             hoverTextColor={textColor}
             hoverBackgroundColor={backgroundColor}
-            className="flex h-20 justify-center items-center sm:h-28 md:h-36"
+            className="flex flex-col gap-1 h-20 justify-center items-center sm:h-28 md:h-36"
           >
+            <span className="invisible md:visible">Apple Inc.</span>
             <SiApple className="text-xl sm:text-3xl md:text-4xl" />
+            <span className="invisible md:visible">(AAPL)</span>
           </HoverBox>
           <HoverBox
             clipShape={clipShape}
             hoverTextColor={textColor}
             hoverBackgroundColor={backgroundColor}
-            className="flex h-20 justify-center items-center sm:h-28 md:h-36"
+            className="flex flex-col gap-1 h-20 justify-center items-center sm:h-28 md:h-36"
           >
+            <span className="invisible md:visible">Alphabet Inc.</span>
             <SiGoogle className="text-xl sm:text-3xl md:text-4xl" />
+            <span className="invisible md:visible">(GOOG)</span>
           </HoverBox>
         </div>
         <div className="grid grid-cols-4 divide-x divide-neutral-700">
@@ -123,13 +126,6 @@ const HoverBoxExample = () => {
           >
             <SiAmazon className="text-xl sm:text-3xl md:text-4xl" />
           </HoverBox>
-        </div>
-        <div className="grid grid-cols-1">
-          <img
-            src={Flower}
-            alt="flower"
-            className="w-full object-cover h-40 grayscale"
-          />
         </div>
       </div>
     </div>
