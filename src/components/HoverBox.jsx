@@ -187,7 +187,7 @@ HoverBox.propTypes = {
   children: PropTypes.node.isRequired,
   hoverTextColor: PropTypes.string,
   hoverBackgroundColor: PropTypes.string,
-  clipShape: PropTypes.oneOf(["rectangle", "polygon", "circle", "line"]),
+  clipShape: PropTypes.oneOf(["polygon", "rectangle", "circle", "line"]),
   duration: PropTypes.number,
   href: PropTypes.string,
 };
