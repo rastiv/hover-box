@@ -39,3 +39,7 @@ import HoverBox from "../components/HoverBox";
 | clipShape            | `polygon, rectangle, circle, line` | polygon |
 | duration             | `number`                           | 0.35    |
 | href                 | `string`                           | -       |
+
+### Screenshots
+
+![Polygon shape](./screenshots/polygon.jpg)
